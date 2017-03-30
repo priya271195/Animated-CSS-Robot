@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<head>
+
+<title>Fourth Project</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+body
+{
+
+  //background:url(pexels-photo.jpg);
+  background-size:cover;
+  background:url("http://i.imgur.com/QhP7TVa.jpg");
+}
+@keyframes sunani {
+  50% {
+    background: radial-gradient(red 15%, transparent 100%), #fff380;
+
+  }
+}
+
+.sun
+{
+
+    width: 200px;
+	height: 200px;
+	animation: sunani .5s infinite;
+	background: #fff380;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 100px;
+	position:relative;
+	margin: -400px 0 0 600px;
+}
+
+
+.moon
+{
+
+       width: 300px;
+	   height: 300px;
+	   border-radius: 50%;
+	   box-shadow: 35px 25px 0 0 white;
+	   margin:90px 0 0 850px;
+	   position: relative;
+
+
+}
+
+.star{
+   margin: -200px 0 0 950px;
+   position: relative;
+   display: block;
+   width: 0px;
+
+   height: 0px;
+   animation: starani .5s infinite;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid white;
+   border-left:   100px solid transparent;
+
+   -webkit-transform: rotate(35deg);
+
+
+}
+
+.star:before {
+	animation: starani1 .5s infinite;
+   border-bottom: 80px solid white;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: relative;
+   height: 0;
+   width: 0;
+
+   top: -45px;
+   left: -65px;
+   display: block;
+
+   content: '';
+   -webkit-transform: rotate(-35deg);
+
+
+}
+
+.star:after {
+   animation: starani .5s infinite;
+   position: absolute;
+   display: block;
+
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid white;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+
+   content: '';
+}
+@keyframes starani{
+	50%{
+		border-right:  100px solid transparent;
+	   border-bottom: 70px  solid transparent;
+	   border-left:   100px solid transparent;
+
+	}
+
+}
+@keyframes starani1{
+	50%{
+		border-bottom: 80px solid transparent;
+	   border-left: 30px solid transparent;
+	   border-right: 30px solid transparent;
+
+	}
+
+}
+h1
+{
+	font-family: 'Londrina Shadow', cursive;
+	  text-align: center;
+	  font-size: 50px;
+	  color: white;
+	  margin: 10px 0 0 0;
+}
+.check{
+margin-left:450px;
+width:150px;
+height:35px;
+
+padding:5px;
+position:fixed;
+font-size:16px;
+background-color:#999999;
+border:#000000;
+border-radius:5px;
+
+}
+.robot{
+position:relative;
+
+
+}
+
+.move{
+	animation: movement .5s infinite;
+  -webkit-animation:movement .5s infinite;
+
+}
+
+@keyframes movement{
+
+ 50%{
+  position: relative;
+  top:80px;
+
+ }
+
+}
+
+
+.check1{
+margin-left:650px;
+width:150px;
+height:35px;
+
+position: fixed;
+padding:5px;
+font-size:16px;
+background-color:#999999;
+border:#000000;
+border-radius:5px;
+
+}
+
+.head{
+height:100px;
+width:100px;
+background:#e8adaa;
+
+position:relative;
+margin: 100px 0 0 150px;
+}
+.eye1{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	left:10%;
+	background:white;
+	top:10%;
+	position:relative;
+}
+.eye2{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	top:-21%;
+	float:right;
+	left:-8%;
+	background:white;
+	position:relative;
+}
+
+@keyframes blink{
+
+	50%{
+		background: radial-gradient(circle, red 100%, transparent 80%);
+
+	}
+	}
+	@keyframes blink1{
+
+	50%{
+		background: radial-gradient(circle, blue 100%, transparent 80%);
+
+	}
+	}
+.innereye1{
+	height:17px;
+	width:17px;
+	border-radius: 17px;
+	border: 1px solid #000000;
+	animation: blink .5s infinite;
+	position:relative;
+	top:20%;
+	left:35%;
+
+}
+.innereye2{
+	height:17px;
+	width:17px;
+	border-radius: 17px;
+	border: 1px solid #000000;
+	animation: blink .5s infinite;
+	position:relative;
+	top:20%;
+
+	left:35%;
+
+}
+.smile{
+
+	border-bottom: 20px solid red;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	height: 0;
+	width: 20px;
+	margin-left:30%;
+	margin-top:25%;
+	transform: rotate(180deg);
+
+
+
+
+}
+.body{
+	width:150px;
+	height:200px;
+	background:white;
+	position:relative;
+	left:125px;
+	top:10px;
+	background:#996666;
+}
+.circle1{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:10%;
+	background:#990099;
+	top:10%;
+
+}
+.circle11{
+	height:20px;
+	animation: blink1 .5s infinite;
+	width:20px;
+	background:white;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:14%;
+	top:13%;
+
+}
+.circle2{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	position:relative;
+	right:40%;
+	top:-6%;
+	float:right;
+	background:yellow;
+
+
+
+}
+.circle21{
+	height:20px;
+	width:20px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:14%;
+	animation: blink .5s infinite;
+	top:13%;
+	background:white;
+
+}
+.circle3{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	position:relative;
+	left:10%;
+	top:-6%;
+	float:right;
+	background:#CC3333;
+
+
+}
+.circle31{
+	height:20px;
+	width:20px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:14%;
+	animation: blink1 .5s infinite;
+	top:13%;
+	background:white;
+}
+
+.circle4{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	position:relative;
+	left:3%;
+	top:16%;
+	float:right;
+
+	background:#990099;
+}
+.circle41{
+	height:20px;
+	width:20px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:14%;
+	animation: blink1 .5s infinite;
+	top:13%;
+	background:white;
+}
+
+.circle5{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	position:relative;
+	background:yellow;
+	left:40%;
+	top:38%;
+
+
+
+}
+.circle51{
+	height:20px;
+	width:20px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:14%;
+	animation: blink .5s infinite;
+	top:13%;
+	background:white;
+}
+.circle6{
+	height:30px;
+	width:30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	position:relative;
+	left:40%;
+	top:45%;
+	background:#CC3333;
+
+
+}
+.circle61{
+	height:20px;
+	width:20px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	position:relative;
+	margin-left:14%;
+	animation: blink1 .5s infinite;
+	top:13%;
+	background:white;
+}
+.leftarm{
+	width:80px;
+	height:20px;
+	border:#000000 solid thin;
+	background:#e8adaa;
+	left:2.8%;
+	margin-top:-13%;
+	position:relative;
+
+}
+.square1{
+	height:20px;
+	width:20px;
+	background:white;
+	position:relative;
+	margin-top:-1.5%;
+	animation: blink .5s infinite;
+	left:1%;
+
+}
+.rightarm{
+	width:80px;
+	height:20px;
+	border:#000000 solid thin;
+	background:#e8adaa;
+	left:20.7%;
+	margin-top:-1.4%;
+	position:relative;
+
+}
+.square2{
+	height:20px;
+	animation: blink .5s infinite;
+	width:20px;
+	background:white;
+	position:relative;
+	margin-top:-1.6%;
+	left:27%;
+
+}
+.leftleg{
+
+	width:20px;
+	height:80px;
+	background:#e8adaa;
+	position:relative;
+	margin-top:12.5%;
+	left:10.5%;
+
+}
+.rightleg{
+
+	width:20px;
+	height:80px;
+	background:#e8adaa;
+	position:relative;
+	margin-top:-6%;
+	left:17.8%;
+
+}
+.left1{
+	height:15px;
+	width:25px;
+	background:white;
+	position:relative;
+	left:8.3%;
+	animation: blink .5s infinite;
+	margin-top:-1.1%;
+
+}
+.right1{
+	height:15px;
+	width:25px;
+	background:white;
+	position:relative;
+	left:19.6%;
+	animation: blink .5s infinite;
+	margin-top:-1.1%;
+
+}
+.antenna1{
+	height:40px;
+	width:10px;
+	background:white;
+	margin-left:20%;
+	animation: blink .5s infinite;
+	position:relative;
+	margin-top:-125%;
+
+
+
+}
+.antenna2{
+	height:40px;
+	width:10px;
+	background:white;
+	margin-left:73%;
+	position:relative;
+	animation: blink .5s infinite;
+	margin-top:-40%;
+}
+
+</style>
+</head>
+
+<body>
+	<h1>Every End Is A New Beginning</h1>
+	<div class="robot">
+
+			<div class="head">
+
+				<div class="eye1">
+					<div class="innereye1"></div>
+				</div>
+				<div class="eye2">
+					<div class="innereye1"></div>
+				</div>
+				<div class="smile"></div>
+				<div class="antenna1"></div>
+				<div class="antenna2"></div>
+			</div>
+
+
+
+			<div class="body">
+				<div class="circle1">
+					<div class="circle11"></div>
+				</div>
+				<div class="circle2">
+					<div class="circle21"></div>
+				</div>
+				<div class="circle3">
+					<div class="circle31"></div>
+				</div>
+				<div class="circle4">
+					<div class="circle41"></div>
+				</div>
+				<div class="circle5">
+					<div class="circle51"></div>
+				</div>
+				<div class="circle6">
+					<div class="circle61"></div>
+				</div>
+
+			</div>
+			<div class="leftarm"></div>
+			<div class="square1"></div>
+
+			<div class="rightarm"></div>
+			<div class="square2"></div>
+			<div class="leftleg"></div>
+
+				<div class="left1"></div>
+			<div class="rightleg"></div>
+				<div class="right1"></div>
+
+	</div>
+	<div class="sun"></div>
+	<div class="star"></div>
+	<div class="moon"></div>
+	<button class="check">Change Colour</button>
+	<button class="check1">Move Rocket</button>
+
+
+	<script>
+		$(".check").click(function() {
+			 var red = Math.floor(Math.random() * 255);
+			  var green = Math.floor(Math.random() * 255);
+			  var blue = Math.floor(Math.random() * 255);
+			  var randomRGBA='rgba('+red+','+green+','+ blue+',1)';
+
+		   var red = Math.floor(Math.random() * 255);
+			  var green = Math.floor(Math.random() * 255);
+			  var blue = Math.floor(Math.random() * 255);
+			  var randomRGBA1='rgba('+red+','+green+','+ blue+',1)';
+			  var red = Math.floor(Math.random() * 255);
+			  var green = Math.floor(Math.random() * 255);
+			  var blue = Math.floor(Math.random() * 255);
+			  var randomRGBA2='rgba('+red+','+green+','+ blue+',1)';
+		  //alert(randomRGBA);
+		  $(".circle1").css("background",randomRGBA);
+		  $(".circle2").css("background",randomRGBA1);
+		  $(".circle3").css("background",randomRGBA2);
+		   $(".circle4").css("background",randomRGBA);
+		  $(".circle5").css("background",randomRGBA1);
+		  $(".circle6").css("background",randomRGBA2);
+		});
+
+		$(".check1").click(function() {
+  		$(".robot").toggleClass('move');
+});
+
+
+
+
+
+
+	</script>
+</body>
+</html>
